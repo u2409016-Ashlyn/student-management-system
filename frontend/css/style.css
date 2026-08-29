@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f7fb;
+    color: #202334;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    height: 70px;
+    background: white;
+    border-bottom: 1px solid #e5e7ee;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #646a79;
+    font-size: 14px;
+}
+
+.navbar nav a:hover {
+    color: #202334;
+}
+
+
+/* MAIN */
+
+.landing {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 25px;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.tag {
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #707687;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.1;
+
+    margin: 18px 0;
+}
+
+.description {
+    color: #73798a;
+
+    line-height: 1.7;
+
+    max-width: 570px;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 13px 20px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.primary {
+    background: #202334;
+    color: white;
+}
+
+.secondary {
+    background: #e9ebf1;
+    color: #202334;
+}
+
+
+/* ACADEMIC CARD */
+
+.hero-card {
+    background: #202334;
+
+    color: white;
+
+    border-radius: 20px;
+
+    padding: 25px;
+}
+
+.mini-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #c4c8d4;
+
+    font-size: 12px;
+}
+
+.score {
+    margin: 35px 0;
+}
+
+.score strong {
+    display: block;
+
+    font-size: 45px;
+}
+
+.score span {
+    color: #adb2c0;
+
+    font-size: 12px;
+}
+
+
+/* PROGRESS */
+
+.mini-progress {
+    margin: 20px 0;
+}
+
+.mini-progress > div:first-child {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 12px;
+
+    margin-bottom: 8px;
+}
+
+.progress {
+    height: 7px;
+
+    background: #45495a;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress span {
+    display: block;
+
+    height: 100%;
+
+    background: white;
+}
+
+
+/* FEATURES */
+
+.features {
+    margin-top: 90px;
+}
+
+.features h2 {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+    repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.feature-card {
+    background: white;
+
+    border: 1px solid #e6e8ef;
+
+    border-radius: 15px;
+
+    padding: 25px;
+}
+
+.feature-card span {
+    font-size: 25px;
+}
+
+.feature-card h3 {
+    margin: 15px 0 8px;
+}
+
+.feature-card p {
+    color: #858b9b;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #8a8f9d;
+
+    font-size: 12px;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns:
+        repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
