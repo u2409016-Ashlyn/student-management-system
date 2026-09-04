@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calendar - CampusPilot</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 5px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1e3a5f;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Main container */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .container h2 {
+            color: #1e3a5f;
+            margin-bottom: 20px;
+        }
+
+        /* Calendar */
+        .calendar {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .calendar-header h3 {
+            color: #1e3a5f;
+        }
+
+        button {
+            background-color: #1e3a5f;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3498db;
+        }
+
+        /* Calendar grid */
+        .days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+
+        .day-name {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .day {
+            background-color: #f8f9fa;
+            min-height: 80px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .day-number {
+            font-weight: bold;
+        }
+
+        .event {
+            margin-top: 8px;
+            background-color: #3498db;
+            color: white;
+            padding: 4px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .exam {
+            background-color: #e74c3c;
+        }
+
+        .assignment {
+            background-color: #f39c12;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: #1e3a5f;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>CampusPilot</h1>
+        <p>Student Management System</p>
+    </header>
+
+
+    <!-- Navigation -->
+    <nav>
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="assignments.html">Assignments</a>
+
+        <a href="assessments.html">Assessments</a>
+
+        <a href="performance.html">Performance</a>
+
+        <a href="alerts.html">Alerts</a>
+
+        <a href="calendar.html">Calendar</a>
+
+    </nav>
+
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <h2>Academic Calendar</h2>
+
+        <div class="calendar">
+
+            <!-- Calendar Header -->
+            <div class="calendar-header">
+
+                <button>Previous</button>
+
+                <h3>September 2026</h3>
+
+                <button>Next</button>
+
+            </div>
+
+
+            <!-- Calendar -->
+            <div class="days">
+
+                <!-- Day names -->
+
+                <div class="day-name">Sun</div>
+                <div class="day-name">Mon</div>
+                <div class="day-name">Tue</div>
+                <div class="day-name">Wed</div>
+                <div class="day-name">Thu</div>
+                <div class="day-name">Fri</div>
+                <div class="day-name">Sat</div>
+
+
+                <!-- Week 1 -->
+
+                <div class="day">
+                    <span class="day-number">1</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">2</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">3</span>
+
+                    <div class="event">
+                        Assignment
+                    </div>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">4</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">5</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">6</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">7</span>
+                </div>
+
+
+                <!-- Week 2 -->
+
+                <div class="day">
+                    <span class="day-number">8</span>
+
+                    <div class="event assignment">
+                        Assignment Due
+                    </div>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">9</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">10</span>
+
+                    <div class="event exam">
+                        Assessment
+                    </div>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">11</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">12</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">13</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">14</span>
+                </div>
+
+
+                <!-- Week 3 -->
+
+                <div class="day">
+                    <span class="day-number">15</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">16</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">17</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">18</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">19</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">20</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">21</span>
+                </div>
+
+
+                <!-- Week 4 -->
+
+                <div class="day">
+                    <span class="day-number">22</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">23</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">24</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">25</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">26</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">27</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">28</span>
+                </div>
+
+
+                <!-- Week 5 -->
+
+                <div class="day">
+                    <span class="day-number">29</span>
+                </div>
+
+                <div class="day">
+                    <span class="day-number">30</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 CampusPilot - Student Management System
+        </p>
+
+    </footer>
+
+</body>
+</html>
